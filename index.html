@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home | State of Texas</title>
+
+   <link rel="stylesheet" href="styles.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+   <script>
+      function confirmEmail() {
+         if ((document.getElementById('email').value) != (document.getElementById('confirm').value)) {
+            alert("Emails don't match!");
+            return false;
+         }
+
+         return true;
+      }
+   </script>
+
+</head>
+<body>
+
+   <header>
+      <div class="logo">
+         <h1>State of Texas</h1>
+      </div>
+      <div class="navbar">
+         <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="austin.html"><span style="color: #D45A1B;">★</span> Austin</a></li>
+               <li><a href="dallas.html">Dallas</a></li>
+               <li><a href="elpaso.html">El Paso</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div class="photo">
+            <img class="main-photo" src="images/texas1.jpg" alt="Morning mist on Steinhagen Reservoir, Martin Dies Jr. State Park, Texas">
+            <p class="credit">Morning mist on Steinhagen Reservoir, Martin Dies Jr. State Park, Texas (Wikipedia)</p>
+         </div>
+
+         <h1>Introduction</h1>
+         <img src="images/texas-seal.png" id="seal" alt="Seal of the State of Texas"><p>The state of Texas is made up of seven, very diverse natural regions. Each region offers an abundance of different species of flora and fauna. Many types of terrain are also found. From tall mountains to canyons, from forests to deserts, the state of Texas has it all! Many people travel to Texas for hiking and to enjoy the scenery overall.</p>
+
+         <table>
+            <thead>
+               <tr>
+                  <th id="region-name">Region Name</th>
+                  <th id="major-city">Major City</th>
+                  <th id="information">Information</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Big Bend Country</td>
+                  <td>El Paso, TX</td>
+                  <td>Home to Big Bend National Park which covers more than 800,000 acres</td>
+               </tr>
+               <tr>
+                  <td>Hill Country</td>
+                  <td>Austin, TX</td>
+                  <td>There are many springs and lakes, including an underground lake in the Edwards Aquifer</td>
+               </tr>
+               <tr>
+                  <td>South Texas Plains</td>
+                  <td>San Antonio, TX</td>
+                  <td>The subtropical Rio Grande Valley is an ecosystem not found anywhere else in the United States</td>
+               </tr>
+               <tr>
+                  <td>Panhandle Plains</td>
+                  <td>Lubbock, TX</td>
+                  <td>Called Panhandle because it resembles a handle with the rest of the state below looking like a pan</td>
+               </tr>
+               <tr>
+                  <td>Gulf Coast</td>
+                  <td>Houston, TX</td>
+                  <td>Stretches for hundreds of miles along the Gulf of Mexico</td>
+               </tr>
+               <tr>
+                  <td>Pineywoods</td>
+                  <td>Beaumont, TX</td>
+                  <td>Made up primarily of a thick forest of pines</td>
+               </tr>
+               <tr>
+                  <td>Prairies & Lakes</td>
+                  <td>Dallas, TX</td>
+                  <td>Fossils of 17 different types of dinosaurs have been found in the region</td>
+               </tr>
+            </tbody>
+         </table>
+         <p class="credit">From <a href="https://tpwd.texas.gov/education/resources/texas-junior-naturalists/regions" target="_blank">Texas Parks & Wildlife</a></p>
+      </section>
+
+      <aside id="overview">
+         <h3>Overview</h3>
+         <p>With a total population of over 30 million, these are the top 5 cities in the state of Texas by population:</p>
+         <ol>
+            <li>Houston - 2.326 million</li>
+            <li>San Antonio - 1.493 million</li>
+            <li>Dallas - 1.345 million</li>
+            <li>Austin - 964,254</li>
+            <li>Fort Worth - 895,008</li>
+         </ol>
+         <p>Other tidbits of information:</p>
+         <ul>
+            <li>Admitted to the Union on December 29, 1845</li>
+            <li>Largest metro area is Dallas-Forth Worth</li>
+            <li>Total area is 268,596 sq. miles</li>
+            <li> Highest point in the state is Guadalupe Peak at 1,700 feet</li>
+         </ul>
+         <h3>Get in touch!</h3>
+         <form id="contact" onsubmit=" return confirmEmail();">
+            <p><label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required></p>
+            
+            <p><label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required></p>
+
+            <p><label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required></p>
+
+            <p><label for="confirm">Confirm Email</label>
+            <input type="email" id="confirm" name="confirm" placeholder="Confirm Email" required></p>
+
+            <p><label for="question">Any questions?</label>
+            <textarea id="question" name="question" rows="10" placeholder="Type your question..."></textarea></p>
+
+            <input type="submit" value="Send">
+         </form>
+      </aside>
+   </main>
+
+   <footer>
+      <ul>
+         <li>Eugenio Felix | 2024</li>
+      </ul>
+   </footer>
+   
+</body>
+</html>
